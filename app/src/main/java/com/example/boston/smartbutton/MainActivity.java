@@ -28,6 +28,20 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        // Button on long click listener
+        kiranbutton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                TextView kirantext = (TextView)findViewById(R.id.kirantext);
+                kirantext.setText("Super Long Click");
+                //why need a return true statement, whenever we have long click this function gets executed
+                //else if click is not long enough it returns onclick listener function
+                // when we go for return false statement then when we hold on the click button , then message is displayed
+                // when we release it shows onclick listener message
+                return false;
+            }
+        });
+
 
     }
 }
